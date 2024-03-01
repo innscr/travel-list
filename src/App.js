@@ -28,13 +28,13 @@ export default function App() {
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
       />
-      <Status />
+      <Status items={items} />
     </div>
   );
 }
 
 function Logo() {
-  return <h1>✈ Travel App </h1>;
+  return <h1>Let's travel ⛵</h1>;
 }
 
 function Form({ onAddItems }) {
@@ -58,7 +58,7 @@ function Form({ onAddItems }) {
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
-      <h3>What dou you need to pack for a trip? </h3>
+      <h3>What dou you need to pack? </h3>
       <select
         value={quantity}
         onChange={(ev) => setQuantity(Number(ev.target.value))}
@@ -113,10 +113,24 @@ function Item({ item, onDeleteItem, onToggleItem }) {
   );
 }
 
-function Status() {
+function Status({ items }) {
+  if (!items.length)
+    return (
+      <p className="stats">
+        <em>Add some items to your list </em>
+      </p>
+    );
+  const numItems = items.length;
+  const numPacked = items.filter((item) => item.packed).length;
+  const percentage = Math.round((numPacked / numItems) * 100);
   return (
     <footer className="stats">
-      <em>Toy have X items on list, and you already pack X%</em>
+      <em>
+        {percentage === 100
+          ? "You have all items from the list"
+          : `You have ${numItems} items on list, and you already packed ${numPacked} (
+        ${percentage}%)`}
+      </em>
     </footer>
   );
 }
