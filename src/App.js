@@ -43,7 +43,7 @@ export default function App() {
 }
 
 function Logo() {
-  return <h1>Let's travel ⛵</h1>;
+  return <h1>Let's travel</h1>;
 }
 
 function Form({ onAddItems }) {
