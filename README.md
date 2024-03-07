@@ -1,5 +1,5 @@
 # Travel app
-> Simple travel list application built with [Create React App](https://github.com/facebook/create-react-app).
+> Simple travel list application built with [React](https://github.com/facebook/create-react-app).
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -11,7 +11,7 @@
 
 
 ## General Information
-The project was created for scientific purposes based on [[course](https://www.udemy.com/course/the-ultimate-react-course)]. The application allows the user to add items to the "packing" list by entering the item description and select the quantity. The user can control the added items by removing them from the list by clicking on the red X button or mark the selected items as "packed" using checkbox. Displayed list of items, can be sorted by order of entry, description or status of packaging. It is also possible to clear the whole list of items by using the "CLEAR LIST" button. To prevent accidental deletion of the list contents, a message is displayed confirming the operation.
+The project was created for scientific purposes based on [[course](https://www.udemy.com/course/the-ultimate-react-course)]. The application allows user to add items to the "packing" list by entering the description and selecting quantity of items. The user can control the added elements by removing them from the list by clicking on the red X button or by marking the selected items as "packed" by using checkbox. The displayed list can be sorted by an input order, description or status of packaging. While adding items to the list, removing them or marking  as "packed", the status of the current item list is updated. It is also possible to clear the whole list of elements by using the "CLEAR LIST" button. Due to preventing accidental deletion of contents there is displayed the window that requires user's confirmation of removing.
 
 
 ## Technologies Used
